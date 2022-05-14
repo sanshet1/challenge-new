@@ -45,10 +45,10 @@ public class FundTransferService {
 		}
 
 		notificationService.notifyAboutTransfer(accountFrom,
-				accountFrom.getAccountId() + " account debited for " + fundTransfer.getAmount() + ".");
+				fundTransfer.getAmount() + " transferred to " + accountTo.getAccountId() + ".");
 
 		notificationService.notifyAboutTransfer(accountTo,
-				accountTo.getAccountId() + " account credited for " + fundTransfer.getAmount() + ".");
+				 fundTransfer.getAmount() + " amount received from " + accountFrom.getAccountId() + ".");
 
 		return "Success";
 
